@@ -1,0 +1,7 @@
+.range{
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    justify-content: space-around;
+    align-items: center;
+}
