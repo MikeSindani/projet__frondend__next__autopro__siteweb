@@ -9,7 +9,7 @@ type SectionCategoryProps = {
 }
 const SectionCategory = ({handleCard} : SectionCategoryProps) => {
   return (
-    <section className='flex flex-col p-8 md:p-16'>
+    <section className='flex flex-col p-5 md:p-10'>
         <h1 className="font-bold text-2xl md:text-3xl text-black text-center m-3">Categories</h1>
         <p className='text-md text-gray-600 text-center'>Choissisez la categorie de votre future voiture.</p>
         <div className='md:m-6'>

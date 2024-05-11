@@ -1,7 +1,8 @@
 'use client'
-import React, { useEffect, useState } from 'react'
-import SectionCategory from "@/components/Section/SectionCategory"
 import SectionCar from "@/Section/SectionCar"
+import SectionFiltre from "@/Section/SectionFiltre"
+import SectionCategory from "@/components/Section/SectionCategory"
+import { useEffect, useState } from 'react'
 
 interface Car {
   id: number;
@@ -117,6 +118,7 @@ export default function SectionVoitures() {
   return (
     <> 
     <SectionCategory handleCard={handleCard} />
+    <SectionFiltre setDataList={setDataList} setDataListNeuf={setDataListNeuf}  data={cars}  />
     <SectionCar mot1="Voiture" mot2={"d'occasion"} list={dataList || cars} cat={cat} />
     <SectionCar mot1="Voiture" mot2={"Neuf"} list={dataList || cars} cat={cat} />
     </>

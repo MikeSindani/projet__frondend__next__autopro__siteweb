@@ -1,7 +1,6 @@
-
 import Link from "next/link";
 
-const Footer = async () => {
+const Footer =  () => {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-secondary-color text-white">

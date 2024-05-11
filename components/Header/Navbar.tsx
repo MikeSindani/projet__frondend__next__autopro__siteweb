@@ -1,8 +1,8 @@
 "use client";
-import React, { useRef } from "react";
-import Link from "next/link";
+import logo from "@/asset/logo.png";
 import Image from "next/image";
-import logo from "@/asset/logo.png"
+import Link from "next/link";
+import { useRef } from "react";
 const Navbar = () => {
   const openMenuLogo = useRef<HTMLDivElement | null>(null);
   const closeMenuLogo = useRef<HTMLDivElement | null>(null);

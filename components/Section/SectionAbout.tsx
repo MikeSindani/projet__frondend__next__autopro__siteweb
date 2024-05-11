@@ -1,6 +1,6 @@
-"use server"
+
 import "./style.css";
-export default async function SectionAbout() {
+export default function SectionAbout() {
   return (
     <section className="bg-secondary-color p-10 md:p-16 flex flex-col ">
       <h1 className="font-bold text-2xl md:text-3xl text-primary-color text-center m-3">Meilleurs experiences avec nos services des ventes!</h1>

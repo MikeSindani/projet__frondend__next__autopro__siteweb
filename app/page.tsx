@@ -1,12 +1,10 @@
 
-import Image from "next/image";
-import Slider from "@/components/Header/Slider"
+import Slider from "@/components/Header/Slider";
 import SectionAbout from "@/components/Section/SectionAbout";
-import SectionServices from "@/components/Section/SectionServices"
-
-import { useState } from "react";
+import SectionContact from "@/components/Section/SectionContact";
+import SectionFAQ from "@/components/Section/SectionFAQ";
+import SectionServices from "@/components/Section/SectionServices";
 import SectionVoitures from "@/components/Section/SectionVoitures";
-import SectionContact from "@/components/Section/SectionContact"
 
 export default function Home() {
 
@@ -26,6 +24,7 @@ export default function Home() {
       <SectionServices/>
       <SectionVoitures/>
       <SectionContact/>
+      <SectionFAQ/>
 
     </div>
   );

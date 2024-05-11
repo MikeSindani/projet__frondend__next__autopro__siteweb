@@ -1,8 +1,8 @@
-"use server"
+
 import Image from "next/image"
 import ImageServices from "@/asset/our_services.svg"
 
-const SectionServices = async () => {
+const SectionServices = () => {
   return (
     <section className='flex flex-col md:flex-row justify-center items-start space-x-3 p-6 md:p-10 border-yellow-300 border-b-8' >
         <div className='flex flex-col md:w-1/2 gap-3 p-6'>

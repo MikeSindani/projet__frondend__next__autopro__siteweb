@@ -1,6 +1,7 @@
 "use client";
-import { ReactBingmaps } from 'react-bingmaps';
 
+import Image from "next/image";
+import maps from "@/asset/maps.svg";
 
 const SectionContact = () => {
   
@@ -8,27 +9,27 @@ const SectionContact = () => {
     <div className="flex flex-col">
       <div className="relative">
         <div
-          className="bg-cover bg-center h-[140dvh] md:h-[110dvh]  w-[100%]"
+          className="bg-cover bg-center h-[150vh] md:h-[120dvh]  w-[100%]"
           style={{
             backgroundImage:
-              "url('https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=600')",
+              "url('https://www.notebookcheck-cn.com/fileadmin/Notebooks/News/_nc3/Google_Pixel_7_3434057.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center gap-3 backdrop-blur-sm p-12 md:p-24">
             <h1
               id="contact"
-              className="text-3xl font-bold  text-primary-color text-center"
+              className="text-2xl md:text-3xl font-bold  text-primary-color text-center"
             >
               Contactez-nous
             </h1>
 
-            <div className="flex flex-col md:flex-row justify-center items-start space-x-3 md:divide-x-2 max-md:divide-y-2 ">
+            <div className="flex flex-col md:flex-row justify-around items-start space-x-3 md:divide-x max-md:divide-y ">
               <div className="flex flex-col md:w-1/2 gap-3 md:p-6 justify-start items-center p-3">
                 <h2
                   id="contact"
-                  class="text-white font-semibold text-2xl md:text-lg"
+                  class="text-white font-semibold text-md md:text-lg text-left"
                 >
-                  Nos Contactes
+                  Nos Contactes et adresses
                 </h2>
                 <div>
                   <ul className="list-none text-left space-y-3">
@@ -67,7 +68,7 @@ const SectionContact = () => {
                 </div>
               </div>
               <div className="md:w-1/2 flex flex-col justify-center items-start p-3 md:p-6">
-                <h2 class="text-white font-semibold text-2xl md:text-lg">
+                <h2 class="text-white font-semibold text-md md:text-lg">
                   Ecrivez-nous sans plus tarder
                 </h2>
                 <div class="p-2">
@@ -139,16 +140,14 @@ const SectionContact = () => {
           </div>
         </div>
       </div>
-      <div className="md:p-16 p-8 flex flex-col justify-center items-center bg-slate-100">
+      <div className="md:p-16 p-8 flex flex-col justify-center items-center bg-slate-200">
+        <div className="flex flex-col justify-center items-center">
+            <Image src={maps} alt="" width={40} height={40} />
+        </div>
         <h1 className="font-bold text-2xl md:text-3xl text-black text-center m-3">
           Ou nous trouvez?
         </h1>
-        <ReactBingmaps
-            bingmapKey="ApA3ACcLjbdAODnlrezTgeAZoTsHoMPfBQNVK-U4X2GZcQbYyYWCUX__EYR3XH46"
-            center={[13.0827, 80.2707]}
-            width="100%" // Ajustez la largeur comme souhaité (par exemple, "500px" ou "100%")
-            height="400px" // Ajustez la hauteur comme souhaité (par exemple, "300px" ou "50vh")
-        />
+        
       </div>
     </div>
   );
