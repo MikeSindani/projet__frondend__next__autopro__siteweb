@@ -1,12 +1,12 @@
 "use client";
 
-import Image from "next/image";
 import maps from "@/asset/maps.svg";
+import Image from "next/image";
 
 const SectionContact = () => {
   
   return (
-    <div className="flex flex-col">
+    <section id="contact" className="flex flex-col">
       <div className="relative">
         <div
           className="bg-cover bg-center h-[150vh] md:h-[120dvh]  w-[100%]"
@@ -17,8 +17,8 @@ const SectionContact = () => {
         >
           <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-center gap-3 backdrop-blur-sm p-12 md:p-24">
             <h1
-              id="contact"
-              className="text-2xl md:text-3xl font-bold  text-primary-color text-center"
+              
+              className="text-3xl md:text-4xl font-bold  text-primary-color text-center"
             >
               Contactez-nous
             </h1>
@@ -27,7 +27,7 @@ const SectionContact = () => {
               <div className="flex flex-col md:w-1/2 gap-3 md:p-6 justify-start items-center p-3">
                 <h2
                   id="contact"
-                  class="text-white font-semibold text-md md:text-lg text-left"
+                  class="text-white font-semibold text-lg text-left"
                 >
                   Nos Contactes et adresses
                 </h2>
@@ -68,7 +68,7 @@ const SectionContact = () => {
                 </div>
               </div>
               <div className="md:w-1/2 flex flex-col justify-center items-start p-3 md:p-6">
-                <h2 class="text-white font-semibold text-md md:text-lg">
+                <h2 class="text-white font-semibold text-lg">
                   Ecrivez-nous sans plus tarder
                 </h2>
                 <div class="p-2">
@@ -130,7 +130,7 @@ const SectionContact = () => {
                     </div>
                     <div className="flex justify-center items-center">
                       <button className="p-3 rounded-lg text-white w-44 md:w-64 bg-primary-color hover:opacity-80 transition-all text-sm">
-                        Envoyer
+                        Envoyer le message
                       </button>
                     </div>
                   </form>
@@ -144,12 +144,12 @@ const SectionContact = () => {
         <div className="flex flex-col justify-center items-center">
             <Image src={maps} alt="" width={40} height={40} />
         </div>
-        <h1 className="font-bold text-2xl md:text-3xl text-black text-center m-3">
+        <h1 className="font-bold text-3xl md:text-4xl text-black text-center m-3">
           Ou nous trouvez?
         </h1>
         
       </div>
-    </div>
+    </section>
   );
 };
 

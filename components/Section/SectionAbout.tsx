@@ -2,9 +2,9 @@
 import "./style.css";
 export default function SectionAbout() {
   return (
-    <section className="bg-secondary-color p-10 md:p-16 flex flex-col ">
-      <h1 className="font-bold text-2xl md:text-3xl text-primary-color text-center m-3">Meilleurs experiences avec nos services des ventes!</h1>
-      <div className="flex flex-col md:flex-row p-10 justify-around items-start">
+    <section className="bg-secondary-color p-10 md:p-16 flex flex-col w-full">
+      <h1 className="font-bold text-3xl md:text-4xl text-primary-color text-center m-3">Meilleurs experiences avec nos services des ventes!</h1>
+      <div className="flex flex-col md:flex-row p-10 justify-center items-center md:justify-around md:items-start">
         <div className="flex flex-col gap-2  w-80 ">
           <div className="h-1/3 p-2 flex items-center justify-center">
             <svg width="100" height="100" viewBox="0 0 160 162" fill="none" xmlns="http://www.w3.org/2000/svg">

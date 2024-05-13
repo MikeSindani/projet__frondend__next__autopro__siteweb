@@ -10,7 +10,7 @@ const SectionFAQ = () => {
   return (
     <section className="flex flex-col p-8 md:p-16 bg-primary-color">
       <div className="m-3">
-      <h1 className="font-bold text-2xl md:text-3xl text-black text-center m-3">
+      <h1 className="font-bold text-3xl md:text-4xl text-black text-center m-3">
         FAQ
       </h1>
       <p className="text-md text-white text-center">

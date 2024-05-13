@@ -1,5 +1,6 @@
 
 import Slider from "@/components/Header/Slider";
+import CarModal from "@/components/Modals/carModal";
 import SectionAbout from "@/components/Section/SectionAbout";
 import SectionContact from "@/components/Section/SectionContact";
 import SectionFAQ from "@/components/Section/SectionFAQ";
@@ -18,14 +19,14 @@ export default function Home() {
 
   
   return (
-    <div>
+    <div className="relative">
       <Slider images={imagesSlider}/>
       <SectionAbout/>
       <SectionServices/>
       <SectionVoitures/>
       <SectionContact/>
       <SectionFAQ/>
-
+      <CarModal/>
     </div>
   );
 }

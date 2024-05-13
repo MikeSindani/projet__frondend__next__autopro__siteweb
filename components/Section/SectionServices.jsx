@@ -1,12 +1,12 @@
 
-import Image from "next/image"
 import ImageServices from "@/asset/our_services.svg"
+import Image from "next/image"
 
 const SectionServices = () => {
   return (
-    <section className='flex flex-col md:flex-row justify-center items-start space-x-3 p-6 md:p-10 border-yellow-300 border-b-8' >
+    <section className='flex flex-col-reverse md:flex-row justify-center items-start space-x-3 p-6 md:p-10 border-yellow-300 border-b-8 w-full' >
         <div className='flex flex-col md:w-1/2 gap-3 p-6'>
-          <h1 className='font-bold text-left text-2xl md:text-4xl m-2'> <span className="text-primary-color">Nos</span> services</h1>
+          <h1 className='font-bold text-left text-3xl md:text-4xl m-2'> <span className="text-primary-color">Nos</span> services</h1>
           <p className='text-slate-600 font-normal text-justify text-md m-4'>
             AutoPro : Votre Partenaire Automobile de Confiance
             Chez AutoPro, nous comprenons que l’achat d’une voiture est une décision importante. 

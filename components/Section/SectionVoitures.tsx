@@ -4,7 +4,7 @@ import SectionFiltre from "@/Section/SectionFiltre"
 import SectionCategory from "@/components/Section/SectionCategory"
 import { useEffect, useState } from 'react'
 
-interface Car {
+ interface Car {
   id: number;
   year: number;
   model:string;
@@ -18,6 +18,12 @@ interface Car {
   images: string[];
   moteur: number;
   unit: string;
+  description?:string;
+  largeur?:string;
+  longeur?:string;
+  hauteur?:string;
+  nombre_de_porte?:number;
+  charge_transporter?:number;
 }
 
 
@@ -36,7 +42,7 @@ const cars: Car[] = [
     etat: "Occasion",
     moteur: 2,
     unit:"L",
-    images: ["https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "golf2.jpg", "golf3.jpg"]
+    images: ["https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"]
   },
   {
     id: 2,
@@ -51,7 +57,7 @@ const cars: Car[] = [
     etat: "Neuf",
     moteur: 2,
     unit:"L",
-    images: ["https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "civic2.jpg", "civic3.jpg"]
+    images: ["https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"]
   },
   {
     id: 3,
@@ -66,7 +72,7 @@ const cars: Car[] = [
     etat: "Occasion",
     moteur: 2,
     unit:"L",
-    images: ["https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "focus2.jpg", "focus3.jpg"]
+    images: ["https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"]
   },
   {
     id: 4,
@@ -81,25 +87,14 @@ const cars: Car[] = [
     etat: "Neuf",
     moteur: 2,
     unit:"L",
-    images: ["https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "corolla2.jpg", "corolla3.jpg"]
-  }
+    images: ["https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", "https://images.pexels.com/photos/1073031/pexels-photo-1073031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"]
+  },
 ];
 export default function SectionVoitures() {
   const [cat,setCat] = useState("coupe")
   const [dataList, setDataList] = useState<Car[]>(cars);
   const [dataListNeuf, setDataListNeuf] = useState<Car[]>(cars);
   
-  
-  const filteredCars = cars.filter((car) => {
-    const yearFilter = car.year >= 2018; // filter by year
-    const kilometrageFilter = car.kilometrage <= 50000; // filter by kilometrage
-    const transmissionFilter = car.transmission === "AT"; // filter by transmission
-    const categoryFilter = car.category === "occasion"; // filter by category
-  
-    return yearFilter && kilometrageFilter && transmissionFilter && categoryFilter;
-  });
-  
-  console.log(filteredCars);
 
    const handleCard = (category: string) => {
     setDataList(cars.filter((car) => car.category.toLocaleLowerCase() === category.toLocaleLowerCase() && car.etat === "Occasion"));
@@ -109,6 +104,7 @@ export default function SectionVoitures() {
   useEffect(()=>{
     const handleFilterbyEtat = () => {
       setDataList(cars.filter((car) => car.etat === "Occasion"));
+
       setDataListNeuf(cars.filter((car) => car.etat === "Neuf"));
     }
     handleFilterbyEtat()
@@ -119,8 +115,12 @@ export default function SectionVoitures() {
     <> 
     <SectionCategory handleCard={handleCard} />
     <SectionFiltre setDataList={setDataList} setDataListNeuf={setDataListNeuf}  data={cars}  />
+    <div id='occasion'>
     <SectionCar mot1="Voiture" mot2={"d'occasion"} list={dataList || cars} cat={cat} />
-    <SectionCar mot1="Voiture" mot2={"Neuf"} list={dataList || cars} cat={cat} />
+    </div>
+    <div id='neuf'>
+    <SectionCar mot1="Voiture" mot2={"Neuf"} list={dataListNeuf || cars} cat={cat} />
+    </div>
     </>
   )
 }

@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Slider = ({ images }) => {
   const [current, setCurrent] = useState(0);
@@ -18,7 +18,7 @@ const Slider = ({ images }) => {
   });
 
   return (
-    <div className="relative w-full h-[90vh] overflow-hidden bg-slate-100">
+    <div className="relative w-full h-[85dvh] md:h-[90vh] overflow-hidden bg-slate-100">
       <button
         className="absolute  left-0 top-1/2 transform -translate-y-1/2 z-10 p-4 text-lg text-white bg-primary-color bg-opacity-50 hover:bg-opacity-75"
         onClick={prevSlide}

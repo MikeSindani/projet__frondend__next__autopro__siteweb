@@ -1,23 +1,32 @@
 "use client";
+import useStoreModal from "@/utils/store";
 import Image from "next/image";
 import Link from "next/link";
+import React from 'react';
 
 // Définition du type pour un plat
 interface Car {
   id: number;
   year: number;
-  model: string;
-  marque: string;
-  priceUSD: number;
-  priceCDF: number;
+  model:string;
+  marque:string;
+  priceUSD:number;
+  priceCDF:number;
   kilometrage: number;
   transmission: string;
   category: string;
-  etat: string;
+  etat:string;
   images: string[];
   moteur: number;
   unit: string;
+  description?:string;
+  largeur?:string;
+  longeur?:string;
+  hauteur?:string;
+  nombre_de_porte?:number;
+  charge_transporter?:number;
 }
+
 
 // Définition du type pour les props du composant
 type DishCarouselProps = {
@@ -38,8 +47,19 @@ function InCardDetails(props : InCardDetailsProps ) {
 }
 
 const CardPlat: React.FC<DishCarouselProps> = ({ data, href }) => {
+  const setdata = useStoreModal((state : any) => state.setData);
+  const setId = useStoreModal((state : any) => state.setId)
+  const showModal = useStoreModal((state : any) => state.showModal);
+  const setShowModal = useStoreModal((state : any) => state.setShowModal);
+  const handleModal = (id:number) =>{
+    setdata(data)
+    setShowModal()
+    setId(id)
+  }
   return (
+    <section className="w-full">
     <div className="flex justify-start items-center overflow-x-scroll overflow-y-hidden ">
+      
       {data.map((dish, index) => (
         <div
           key={index}
@@ -79,17 +99,23 @@ const CardPlat: React.FC<DishCarouselProps> = ({ data, href }) => {
           </div>
 
           <div className="flex flex-col gap-2 justify-center m-2">
-            <Link
-              href={href == undefined ? "/" : href}
+            <button 
+              onClick={()=>handleModal(dish.id)}
               className=" hover:bg-gray-900 hover:text-white w-full text-center py-2 rounded-full text-sm font-medium bg-primary-color text-white"
             >
               Voir plus
-            </Link>
+            </button>
           </div>
         </div>
       ))}
     </div>
+    </section>
   );
 };
 
 export default CardPlat;
+
+
+
+
+

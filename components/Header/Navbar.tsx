@@ -87,48 +87,48 @@ const Navbar = () => {
                   >
                     Accuiel
                   </Link>
-                  <Link
-                    href="/#plats"
+                  <a
+                    href="#services"
                     className="text-gray-300  hover:text-primary-color px-1 py-2 rounded-md text-sm font-medium max-md:text-center"
                   >
                     Nos Services
-                  </Link>
-                  <Link
-                    href="/#restaurants"
+                  </a>
+                  <a
+                    href="#services"
                     className="text-gray-300  hover:text-primary-color px-1 py-2 rounded-md text-sm font-medium max-md:text-center"
                   >
                     Categories
-                  </Link>
-                  <Link
-                    href="/#menus"
+                  </a>
+                  <a
+                    href="#occasion"
                     className="text-gray-300  hover:text-primary-color px-1 py-2 rounded-md text-sm font-medium max-md:text-center"
                   >
                     Voiture d{"'"}occasion
-                  </Link>
-                  <Link
-                    href="/#menus"
+                  </a>
+                  <a
+                    href="#neuf"
                     className="text-gray-300  hover:text-primary-color px-1 py-2 rounded-md text-sm font-medium max-md:text-center"
                   >
                     Voiture neuve
-                  </Link>
-                  <Link
-                    href="/#menus"
+                  </a>
+                  <a
+                    href="/#lieu"
                     className="text-primary-color  hover:text-primary-color px-1 py-2 rounded-md text-sm font-medium max-md:text-center"
                   >
                     Ou nous sommes?
-                  </Link>
-                  <Link
-                    href="/sign-up"
+                  </a>
+                  <a
+                    href="#contact"
                     className="text-white hover:bg-white  hover:text-black px-6 py-2 rounded-full text-sm  bg-primary-color font-bold max-md:text-center max-md:w-2/3"
                   >
                     Contactez-nous
-                  </Link>
+                  </a>
                 </div>
                 <div className="flex items-center m-2">
                   <ul className="list-none flex items-center gap-2 justify-center">
                     <li className="">
                       <a
-                        href="#"
+                        href=""
                         className="hover:text-orange-500 text-blue-600"
                       >
                         <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,7 +145,7 @@ const Navbar = () => {
                       </a>
                     </li>
                     <li className="">
-                      <a href="#" className="hover:text-orange-500 ">
+                      <a href="" className="hover:text-orange-500 ">
                         <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20 0C8.955 0 0 8.955 0 20C0 31.045 8.955 40 20 40C31.045 40 40 31.045 40 20C40 8.955 31.045 0 20 0ZM30.11 16.075C30.415 22.8083 25.3933 30.315 16.5033 30.315C13.8 30.315 11.285 29.5217 9.16667 28.1633C11.7067 28.4633 14.2417 27.7567 16.2533 26.1817C14.16 26.1433 12.3917 24.7583 11.78 22.8567C12.5317 23 13.2717 22.9583 13.9433 22.775C11.6417 22.3117 10.0517 20.2383 10.1033 18.02C10.75 18.3783 11.4867 18.5933 12.2717 18.6183C10.14 17.1933 9.53667 14.3783 10.79 12.2267C13.15 15.1233 16.6783 17.0283 20.6567 17.2283C19.9583 14.235 22.23 11.35 25.3217 11.35C26.6967 11.35 27.9417 11.9317 28.815 12.8617C29.905 12.6483 30.9317 12.2483 31.855 11.7C31.4967 12.8183 30.7383 13.755 29.75 14.3483C30.7183 14.2317 31.6417 13.975 32.4983 13.5933C31.8583 14.5567 31.0483 15.4 30.11 16.075Z" fill="#F1BC00"/>
                         </svg>
@@ -154,7 +154,7 @@ const Navbar = () => {
                     </li>
                     <li className="">
                       <a
-                        href="#"
+                        href=""
                         className="hover:text-orange-500 text-red-500"
                       >
                         <svg width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,7 +167,9 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div></div>
+          <div>
+
+          </div>
         </div>
       </nav>
     </header>

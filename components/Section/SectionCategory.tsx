@@ -1,16 +1,15 @@
 "use client"
-import React from 'react'
-import engin from "@/asset/engin.svg"
-import Image from 'next/image'
-import trackteur from '@/asset/trackteur.svg'
 import berline from "@/asset/berline.svg"
+import engin from "@/asset/engin.svg"
+import trackteur from '@/asset/trackteur.svg'
+import Image from 'next/image'
 type SectionCategoryProps = {
    handleCard: (category: string  ) => void
 }
 const SectionCategory = ({handleCard} : SectionCategoryProps) => {
   return (
     <section className='flex flex-col p-5 md:p-10'>
-        <h1 className="font-bold text-2xl md:text-3xl text-black text-center m-3">Categories</h1>
+        <h1 className="font-bold text-3xl md:text-4xl text-black text-center m-3">Categories</h1>
         <p className='text-md text-gray-600 text-center'>Choissisez la categorie de votre future voiture.</p>
         <div className='md:m-6'>
             <div className='grid grid-cols-2 gap-3 md:grid-cols-5'>

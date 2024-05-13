@@ -8,7 +8,7 @@ const Footer =  () => {
         {/* Logo */}
         <div className="w-full md:w-1/4 p-2">
           <div className="flex flex-col justify-center mb-4 gap-y-2">
-            <div className="text-2xl text-primary-color font-extrabold font-Great-Vibes text-primary-color">
+            <div className="text-3xl md:text-4xl text-primary-color font-extrabold font-Great-Vibes text-primary-color">
               AutoPro
             </div>
             <p className="text-white text-sm">
