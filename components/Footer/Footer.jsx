@@ -1,3 +1,4 @@
+'use client';
 import Link from "next/link";
 
 const Footer =  () => {
@@ -93,7 +94,7 @@ const Footer =  () => {
       </div>
       <div className="bg-primary-color text-white p-6">
         <div className="container mx-auto text-center">
-          <p className="mb-2 text-white font-bold">
+          <p className="mb-2 text-white font-meduim">
             © {currentYear} AutoPro Tous droits réservés.
           </p>
         </div>

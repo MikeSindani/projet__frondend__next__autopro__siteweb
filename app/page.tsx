@@ -1,9 +1,9 @@
-
 import Slider from "@/components/Header/Slider";
 import CarModal from "@/components/Modals/carModal";
 import SectionAbout from "@/components/Section/SectionAbout";
 import SectionContact from "@/components/Section/SectionContact";
 import SectionFAQ from "@/components/Section/SectionFAQ";
+import SectionMaps from "@/components/Section/SectionMaps";
 import SectionServices from "@/components/Section/SectionServices";
 import SectionVoitures from "@/components/Section/SectionVoitures";
 
@@ -25,6 +25,7 @@ export default function Home() {
       <SectionServices/>
       <SectionVoitures/>
       <SectionContact/>
+      <SectionMaps/>
       <SectionFAQ/>
       <CarModal/>
     </div>

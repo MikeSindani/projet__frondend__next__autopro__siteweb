@@ -92,24 +92,14 @@ const cars: Car[] = [
 ];
 export default function SectionVoitures() {
   const [cat,setCat] = useState("coupe")
-  const [dataList, setDataList] = useState<Car[]>(cars);
-  const [dataListNeuf, setDataListNeuf] = useState<Car[]>(cars);
+  const [dataList, setDataList] = useState<Car[]>(cars.filter((car) => car.etat === "Occasion"));
+  const [dataListNeuf, setDataListNeuf] = useState<Car[]>(cars.filter((car) => car.etat === "Neuf"));
   
 
    const handleCard = (category: string) => {
     setDataList(cars.filter((car) => car.category.toLocaleLowerCase() === category.toLocaleLowerCase() && car.etat === "Occasion"));
     setDataListNeuf(cars.filter((car) => car.category.toLocaleLowerCase() === category.toLocaleLowerCase() && car.etat === "Neuf"));
   }
-
-  useEffect(()=>{
-    const handleFilterbyEtat = () => {
-      setDataList(cars.filter((car) => car.etat === "Occasion"));
-
-      setDataListNeuf(cars.filter((car) => car.etat === "Neuf"));
-    }
-    handleFilterbyEtat()
-
-  },[])
 
   return (
     <> 

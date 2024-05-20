@@ -1,6 +1,6 @@
 "use client";
+import React, { useState, useEffect } from 'react';
 
-import maps from "@/asset/maps.svg";
 import Image from "next/image";
 
 const SectionContact = () => {
@@ -27,7 +27,7 @@ const SectionContact = () => {
               <div className="flex flex-col md:w-1/2 gap-3 md:p-6 justify-start items-center p-3">
                 <h2
                   id="contact"
-                  class="text-white font-semibold text-lg text-left"
+                  className="text-white font-semibold text-lg text-left"
                 >
                   Nos Contactes et adresses
                 </h2>
@@ -68,19 +68,19 @@ const SectionContact = () => {
                 </div>
               </div>
               <div className="md:w-1/2 flex flex-col justify-center items-start p-3 md:p-6">
-                <h2 class="text-white font-semibold text-lg">
+                <h2 className="text-white font-semibold text-lg">
                   Ecrivez-nous sans plus tarder
                 </h2>
-                <div class="p-2">
+                <div className="p-2">
                   <form
-                    class="flex gap-3 flex-col justify-center"
+                    className="flex gap-3 flex-col justify-center"
                     action="https://formsubmit.co/contact@autopro.lu"
                     method="POST"
                     id="contact@Autopro.lu"
                   >
                     <div className="">
-                      <label for="name">
-                        <span class="label text-primary-color">Nom</span>
+                      <label Htmlfor="name">
+                        <span className="label text-primary-color">Nom</span>
                       </label>
                       <input
                         className="p-4 border-x-0 border-t-0 border-b-2  w-full border-b-primary-color text-white text-sm bg-transparent"
@@ -90,8 +90,8 @@ const SectionContact = () => {
                       />
                     </div>
                     <div className="flex flex-col justify-start">
-                      <label for="name">
-                        <span class="text-primary-color">Email</span>
+                      <label Htmlfor="email">
+                        <span className="text-primary-color">Email</span>
                       </label>
                       <input
                         className="p-4 border-x-0 border-t-0 border-b-2  w-full border-b-primary-color text-white text-sm bg-transparent "
@@ -101,8 +101,8 @@ const SectionContact = () => {
                       />
                     </div>
                     <div className="">
-                      <label for="name">
-                        <span class="label text-primary-color">Téléphone</span>
+                      <label Htmlfor="phone">
+                        <span className="label text-primary-color">Téléphone</span>
                       </label>
                       <input
                         className="p-4 border-x-0 border-t-0 border-b-2  w-full border-b-primary-color text-white text-sm bg-transparent "
@@ -119,8 +119,8 @@ const SectionContact = () => {
                     <input type="hidden" name="_template" value="basic" />
                     <input type="hidden" name="_captcha" value="false" />
                     <div className="">
-                      <label for="name">
-                        <span class="label text-primary-color">Message</span>
+                      <label Htmlfor="name">
+                        <span className="label text-primary-color">Message</span>
                       </label>
                       <textarea
                         className="p-4 border-x-0 border-t-0 border-b-2  w-full border-b-primary-color text-white text-sm bg-transparent "
@@ -139,15 +139,6 @@ const SectionContact = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="md:p-16 p-8 flex flex-col justify-center items-center bg-slate-200">
-        <div className="flex flex-col justify-center items-center">
-            <Image src={maps} alt="" width={40} height={40} />
-        </div>
-        <h1 className="font-bold text-3xl md:text-4xl text-black text-center m-3">
-          Ou nous trouvez?
-        </h1>
-        
       </div>
     </section>
   );
