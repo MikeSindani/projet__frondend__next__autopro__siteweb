@@ -148,7 +148,7 @@ const Navbar = () => {
               className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               href="https://wa.me/243992099990"
             >
-              <FaWhatsapp />
+              <FaWhatsapp size={18} />
             </a>
           </div>
         </div>

@@ -3,6 +3,7 @@ import useStoreModal, { convertUSDToCDF, formatedNumber } from "@/utils/store";
 import Image from "next/image";
 import Link from "next/link";
 import React from 'react';
+import ScrollAnimation from "react-animate-on-scroll";
 
 // Définition du type pour un plat
 interface Car {
@@ -59,15 +60,15 @@ const CardPlat: React.FC<DishCarouselProps> = ({ data, href }) => {
   // <div className="flex justify-start items-center overflow-x-scroll overflow-y-hidden ">
   return (
     <section className="w-full">
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-1 md:gap-2">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 md:gap-2">
       {data.map((dish, index) => (
+        <ScrollAnimation key={index} animateIn="fadeIn" delay={300}>
         <div
-          key={index}
-          className="flex-shrink-0 w-40 md:w-64 m-1 rounded-xl shadow-lg bg-white h-full hover:scale-95 transition-all duration-200"
+          className="flex-shrink-0 w-40 md:w-64  rounded-xl shadow-lg bg-white h-full hover:scale-95 transition-all duration-200"
         >
           <div className="flex justify-center items-center">
             <Image
-              className={"h-52 w-full object-cover mb-4 rounded-xl"}
+              className={"h-64 md:h-52 w-full object-cover mb-4 rounded-xl"}
               src={dish.images[0]}
               alt={`${dish.marque} ${dish.model}`}
               width={500}
@@ -75,18 +76,18 @@ const CardPlat: React.FC<DishCarouselProps> = ({ data, href }) => {
             />
           </div>
           <div className="flex flex-col p-1 text-center">
-            <h1 className="text-xl font-bold m-1 text-gray-900">{`${dish.marque}`}</h1>
-            <h2 className="text-lg flex gap-1  justify-center items-center flex-col">
+            <h1 className="text-2xl font-bold m-1 text-gray-900">{`${dish.marque}`}</h1>
+            <h3 className="text-lg flex gap-1  justify-center items-center flex-col">
               <p className="text-primary-color font-bold text-center hidden">
                 {formatedNumber(dish.priceUSD)}$
               </p>
-              <p className="text-primary-color font-bold text-center ">
+              <p className="text-primary-color max-md:text-base font-bold text-center ">
                 Prix sur demande
               </p>
               <p className="text-slate-600 font-light text-center text-sm hidden">
                 {convertUSDToCDF(dish.priceUSD) || dish.priceCDF} francs congolais
               </p>
-            </h2>
+            </h3>
             <div className="divide-x-2 flex space-x-2 my-3 mx-1 justify-center items-center hidden">
               <InCardDetails title="Moteur" desc={dish.moteur}></InCardDetails>
               <InCardDetails title="Trans." desc={dish.transmission}></InCardDetails>
@@ -99,7 +100,6 @@ const CardPlat: React.FC<DishCarouselProps> = ({ data, href }) => {
               <p className="text-gray-900 text-xs hidden">{dish.etat}</p>
             </div>
           </div>
-
           <div className="flex flex-col gap-2 justify-center m-2">
             <button 
               onClick={()=>handleModal(dish.id)}
@@ -109,6 +109,7 @@ const CardPlat: React.FC<DishCarouselProps> = ({ data, href }) => {
             </button>
           </div>
         </div>
+        </ScrollAnimation>
       ))}
     </div>
     </section>

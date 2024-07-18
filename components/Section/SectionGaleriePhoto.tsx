@@ -21,6 +21,8 @@ export default function SectionGaleriePhoto() {
     "/img/landcruiserVan (6).jpg",
     "/img/jagar (1).jpg",
     "/img/jagar (5).jpg",
+    "/img/lexus (4).jpg",
+   
 
   ];
   return (
@@ -29,7 +31,7 @@ export default function SectionGaleriePhoto() {
       className="px-6 py-10 md:py-16 flex flex-col justify-center items-center bg-secondary-color w-full"
     >
       <h1 className="font-bold text-3xl md:text-4xl text-white text-center m-3">
-        Galerie Photo
+        Galerie <span className="text-primary-color">Photo</span> 
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-3  justify-center items-start w-full gap-4 my-8">
         {imagesSlider.map((image, index) => (

@@ -178,7 +178,6 @@ const cars: Car[] = [
       "/img/lexus (1).jpg",
       "/img/lexus (2).jpg",
       "/img/lexus (3).jpg",
-      "/img/lexus (4).jpg",
       "/img/lexus (5).jpg",
       "/img/lexus (6).jpg",
    ],
@@ -239,24 +238,20 @@ export default function SectionVoitures() {
         data={cars}
       />
       <div id="voitures">
-        <ScrollAnimation animateIn="fadeIn" delay={300}>
           <SectionCar
             mot1="Notre catalogue"
             mot2={"des voitures"}
             list={dataList || cars}
             cat={cat}
           />
-        </ScrollAnimation>
       </div>
       <div className="hidden" id="neuf">
-        <ScrollAnimation animateIn="fadeIn" delay={300}>
           <SectionCar
             mot1="Voiture"
             mot2={"Neuf"}
             list={dataListNeuf || cars}
             cat={cat}
           />
-        </ScrollAnimation>
       </div>
     </>
   );

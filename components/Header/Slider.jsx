@@ -18,7 +18,7 @@ const Slider = ({ images }) => {
   });
 
   return (
-    <section className="relative w-full h-full overflow-hidden bg-slate-100 shadow-md">
+    <div className="relative w-full h-full overflow-hidden bg-slate-100 shadow-md">
       <button
         className="absolute  left-0 top-1/2 transform -translate-y-1/2 z-10 p-4 text-lg text-white bg-primary-color bg-opacity-50 hover:bg-opacity-75"
         onClick={prevSlide}
@@ -80,7 +80,7 @@ const Slider = ({ images }) => {
           </div>
         </div>
       ))}
-    </section>
+    </div>
   );
 };
 

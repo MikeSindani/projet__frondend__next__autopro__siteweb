@@ -35,11 +35,11 @@ const CarModal: React.FC = () => {
         {list.map((car: any, index: number) => (
           <div
             key={index}
-            className="z-50 absolute flex flex-col  top-[55%] h-[85dvh] divide-y-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 bg-white rounded-lg shadow-lg"
+            className="z-50 absolute flex flex-col  top-[55%] h-[75dvh] md:h-[85dvh] divide-y-2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 bg-white rounded-lg shadow-lg"
           >
             <div className="modal-header flex justify-between items-center p-4 hidden">
               <h5 className="modal-title text-lg text-center font-bold">
-                {car.marque} - 
+                {car.marque} -
               </h5>
               <button
                 type="button"
@@ -119,29 +119,31 @@ const CarModal: React.FC = () => {
               </div>
             </div>
             <div>
-              <div className="modal-footer flex justify-center items-center gap-3 p-2">
-                <h5 className="modal-title text-lg text-center font-bold">
-                  {car.marque} - 
+              <div className="modal-footer flex max-md:flex-col justify-center items-center gap-3 p-2">
+                <h5 className="modal-title text-2xl text-center font-bold">
+                  {car.marque} <span className="max-md:hidden">|</span> 
                 </h5>
-                <a
-                  href="#contact"
-                  className="text-white  hover:opacity-90  hover:text-black px-6 py-2 rounded-lg text-sm  bg-primary-color font-bold max-md:text-center max-md:w-2/3"
-                >
-                  Contactez-nous pour cette voiture
-                </a>
-                <button
-                  type="button"
-                  className="close text-white  bg-red-400  hover:text-black px-6 py-2 rounded-lg text-sm  max-md:text-center max-md:w-2/3"
-                  aria-label="Close"
-                  onClick={onClose}
-                >
-                  <span
-                    className="text-md uppercase font-bold "
-                    aria-hidden="true"
+                <div className="flex justify-center items-center gap-3">
+                  <a
+                    href="https://wa.me/243992099990?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+la+voiture+ici.+Pouvez-vous+m%27expliquer+comment+l%27obtenir+et+les+d%C3%A9tails+de+l%27achat%3F"
+                    className="text-white  hover:opacity-90  hover:text-black px-6 py-2 rounded-lg text-sm  bg-primary-color font-bold max-md:text-center max-md:w-2/3"
                   >
-                    &times; fermer
-                  </span>
-                </button>
+                    Contactez-nous pour {car.marque}
+                  </a>
+                  <button
+                    type="button"
+                    className="close text-white  bg-red-400  hover:text-black px-6 py-2 rounded-lg text-sm  max-md:text-center max-md:w-2/3"
+                    aria-label="Close"
+                    onClick={onClose}
+                  >
+                    <span
+                      className="text-md uppercase font-bold "
+                      aria-hidden="true"
+                    >
+                      &times; fermer
+                    </span>
+                  </button>
+                </div>
               </div>
               <p className="text-slate-400 text-xs p-1 text-center">
                 Cliquer sur contacter pour envoyer un message sur whatsapp.

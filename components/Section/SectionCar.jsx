@@ -9,7 +9,7 @@ const SectionCars = ({ mot1, mot2, list, cat }) => {
               <span>{mot1} <span className="text-primary-color">{mot2}</span></span>
               
             </h1>
-            <p className="text-gray-700">Voici la liste des quelques-uns de nos véhicules mis en vente pour votre confort.</p>
+            <p className="text-gray-700 m-2">Voici la liste des quelques-uns de nos véhicules mis en vente pour votre confort.</p>
           </div>
           {list && list.length > 0 ? (
             <CardPlat data={list} />

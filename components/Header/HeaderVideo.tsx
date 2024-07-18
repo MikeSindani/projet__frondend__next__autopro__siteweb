@@ -16,10 +16,10 @@ const HeaderVideo = () => {
             <div className=" place-content-center  grid md:hidden">
               <Image src={logo} alt="logo" width={200} height={200} />
             </div>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-4xl font-bold text-white  m-2 z-3">
+            <h1 className="text-2xl md:text-4xl lg:text-4xl font-bold text-white  m-2 z-3">
               Bienvenue sur <span className="text-primary-color">Autopro</span> 
             </h1>
-            <div className="text-white text-lg">
+            <div className="text-white text-lg max-md:text-md">
               Votre site de vente des voitures neuf ou d{"'"}occasion.
             </div>
           </div>

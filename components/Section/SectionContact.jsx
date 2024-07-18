@@ -12,7 +12,7 @@ const SectionContact = () => {
     <section id="contact" className="flex flex-col">
       <div className="relative">
         <div
-          className="bg-cover bg-center h-[150dvh] md:h-[120dvh]  w-[100%]"
+          className="bg-cover bg-center h-[140dvh] md:h-[120dvh]  w-[100%] bg-fixed"
           style={{
             backgroundImage:
               "url('https://www.notebookcheck-cn.com/fileadmin/Notebooks/News/_nc3/Google_Pixel_7_3434057.jpg')",
