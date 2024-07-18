@@ -22,6 +22,7 @@
     "react-bingmaps": "^3.6.1",
     "react-dom": "^18",
     "react-responsive-carousel": "^3.2.23",
+    "sharp": "^0.33.4",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "zustand": "^4.5.2"
