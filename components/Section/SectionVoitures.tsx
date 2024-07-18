@@ -69,8 +69,8 @@ const cars: Car[] = [
     unit: "L",
     images: [
       "/img/hilux (1).jpg",
-      "/img/hilux (2).jpg",
-      "/img/hilux (3).jpg",
+      "/img/hilux (8).jpg",
+      "/img/hilux (9).jpg",
       "/img/hilux (4).jpg",
       "/img/hilux (5).jpg",
       "/img/hilux (6).jpg",
@@ -199,10 +199,8 @@ const cars: Car[] = [
     images: [
       "/img/lexusGris (1).jpg",
       "/img/lexusGris (2).jpg",
-      "/img/lexusGris (3).jpg",
       "/img/lexusGris (4).jpg",
       "/img/lexusGris (5).jpg",
-      "/img/lexusGris (6).jpg",
    ],
   },
 ];

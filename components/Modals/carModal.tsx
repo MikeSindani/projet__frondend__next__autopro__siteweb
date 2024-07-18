@@ -63,6 +63,8 @@ const CarModal: React.FC = () => {
                   emulateTouch={true}
                   showStatus
                   showThumbs
+                  useKeyboardArrows
+                  autoPlay
                 >
                   {car.images.map((photo: any, index: number) => (
                     <div key={index}>

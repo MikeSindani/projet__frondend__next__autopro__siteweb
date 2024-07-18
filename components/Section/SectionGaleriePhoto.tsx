@@ -7,6 +7,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 export default function SectionGaleriePhoto() {
   const imagesSlider = [
+    "/img/autopro.jpg",
     "/img/autopro (1).jpg",
     "/img/autopro (3).jpg",
     "/img/autopro (7).jpg",

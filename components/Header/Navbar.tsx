@@ -97,7 +97,7 @@ const Navbar = () => {
                   </a>
                   <a
                     href="#category"
-                    className="text-gray-300  hover:text-primary-color px-1 py-2 rounded-md text-sm font-medium max-md:text-center"
+                    className="text-gray-300 hidden  hover:text-primary-color px-1 py-2 rounded-md text-sm font-medium max-md:text-center"
                   >
                     Categories
                   </a>
