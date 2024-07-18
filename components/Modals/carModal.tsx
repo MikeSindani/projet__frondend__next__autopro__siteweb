@@ -125,7 +125,7 @@ const CarModal: React.FC = () => {
                 </h5>
                 <div className="flex justify-center items-center gap-3">
                   <a
-                    href="https://wa.me/243992099990?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+la+voiture+ici.+Pouvez-vous+m%27expliquer+comment+l%27obtenir+et+les+d%C3%A9tails+de+l%27achat%3F"
+                    href="https://wa.me/243992099990?text=Bonjour%2C+je+suis+int%C3%A9ress%C3%A9+par+vos+voitures.+Pouvez-vous+m%27expliquer+comment+l%27obtenir+et+les+d%C3%A9tails+de+l%27achat%3F+svp"
                     className="text-white  hover:opacity-90  hover:text-black px-6 py-2 rounded-lg text-sm  bg-primary-color font-bold max-md:text-center max-md:w-2/3"
                   >
                     Contactez-nous pour {car.marque}
