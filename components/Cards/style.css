@@ -1,0 +1,5 @@
+/* Style appliqué lorsque l'élément est survolé */
+.element:hover .info {
+    display: flex;
+    opacity: 1;
+  }
