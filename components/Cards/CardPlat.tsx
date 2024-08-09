@@ -61,24 +61,25 @@ const CardPlat: React.FC<DishCarouselProps> = ({ data, href }) => {
   // <div className="flex justify-start items-center overflow-x-scroll overflow-y-hidden ">
   return (
     <section className="w-full">
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 md:gap-3">
+    <div className="grid max-sm:grid-cols-2  grid-cols-3  md:grid-cols-4  gap-2 md:gap-3">
       {data.map((dish, index) => (
         <ScrollAnimation key={index} animateIn="fadeIn" delay={300}>
         <div
-          className="element flex-shrink-0 w-40 md:w-64  rounded-xl  bg-white h-full hover:scale-105 transition-all duration-200"
+          className="element flex-shrink-0 max-sm:w-40 w-52  md:w-64  rounded-xl  bg-white h-full hover:scale-105 hover:shadow-md transition-all duration-200"
         >
           <div className="flex justify-center items-center bg-orange-100">
             <Image
-              className={"h-64 md:h-52 w-full object-cover mb-4 rounded-xl"}
+              className={"h-40 md:h-52 w-full object-scale-down  mb-4 rounded-xl ml-0"}
               src={dish.images[0]}
               alt={`${dish.marque} ${dish.model}`}
               width={500}
               height={500}
+              
             />
           </div>
           <div className="flex flex-col p-1 text-center">
-            <h1 className="text-2xl font-bold m-1 text-gray-900">{`${dish.marque}`}</h1>
-            <h4 className="text-md flex gap-1  justify-center items-center flex-col">
+            <h2 className="text-md md:text-lg  font-bold m-1 text-gray-900">{`${dish.marque}`}</h2>
+            <h4 className="text-sm flex gap-1  justify-center items-center flex-col">
               <p className="text-primary-color font-bold text-center hidden">
                 {formatedNumber(dish.priceUSD)}$
               </p>
